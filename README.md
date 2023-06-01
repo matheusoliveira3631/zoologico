@@ -41,7 +41,12 @@ Dicas:
 >
 > Exemplo de formato:
 > 
-> Classe A (herda de B) - Atributos: atr1, atr2 e atr3 - Métodos: metodoA, metodoB e metodoC
+> Classe Animal, atributos: Nome; Métodos: getNome
+> Classe Tigre, atributos: Nome, Pelo, Patas, Som; Métodos: getNome, getPelo, getSom, getDescricaoResumida, getDescricaoCompleta
+> Classe Chimpanze, atributos: Nome, Pelo, Patas, Som; Métodos: getNome, getPelo, getSom, getDescricaoResumida, getDescricaoCompleta
+> Classe Avestruz, atributos: Nome, Patas, Som, VoaBem; Métodos: getNome, getVoaBem, getSom, getDescricaoResumida, getDescricaoCompleta
+> Classe Tucano, atributos: Nome, Patas, Som, VoaBem; Métodos: getNome, getVoaBem, getSom, getDescricaoResumida, getDescricaoCompleta
+
 
 ### Passo 1.2 - Implementar a Hierarquia de Herança
 
