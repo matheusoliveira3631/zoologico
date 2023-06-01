@@ -41,14 +41,19 @@ Dicas:
 >
 > Exemplo de formato:
 > 
-> Classe Animal, atributos: Nome; Métodos: getNome
-> Classe Tigre (herda animal), atributos: Nome, Pelo, Patas, Som; Métodos: getNome, getPelo, getSom, getDescricaoResumida, getDescricaoCompleta
+> Classe Animal, atributos: Nome, espécie, patas, som; Métodos: getNome, getEspécie, getDescricaoResumida, getDescricaoCompleta, getSom, getPatas.
 >
-> Classe Chimpanze (herda animal), atributos: Nome, Pelo, Patas, Som; Métodos: getNome, getPelo, getSom, getDescricaoResumida, getDescricaoCompleta
+> Classe AnimalTerrestre(herda animal); Atributos: pelo; Métodos: getPelo, getDescricaoCompleta.
 >
-> Classe Avestruz (herda animal), atributos: Nome, Patas, Som, VoaBem; Métodos: getNome, voaBem, getSom, getDescricaoResumida, getDescricaoCompleta
+> Classe Tigre (herda animalTerrestre)
 >
-> Classe Tucano (herda animal), atributos: Nome, Patas, Som, VoaBem; Métodos: getNome, voaBem, getSom, getDescricaoResumida, getDescricaoCompleta
+> Classe Chimpanze (herda animalTerrestre)
+>
+> Classe AnimalVoador (herda animal): Atributos: voaBem; Métodos: voaBem, getDescricaoCompleta.
+>
+> Classe Avestruz (herda AnimalVoador)
+>
+> Classe Tucano (herda AnimalVoador)
 
 
 ### Passo 1.2 - Implementar a Hierarquia de Herança
