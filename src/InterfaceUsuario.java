@@ -7,12 +7,14 @@ public class InterfaceUsuario {
 
     // Scanner para obter dados do usuário via terminal
     private Scanner entrada;
+    private Zoologico zoologico;
 
     /* 
      * Construtor da classe
      */
     public InterfaceUsuario() {
         entrada = new Scanner(System.in);
+        this.zoologico=new Zoologico();
     }
 
     /*
@@ -86,32 +88,74 @@ public class InterfaceUsuario {
         return informacao;
     }
 
+
+
     /*
      * Trata a opção de menu: Cadastrar Animal
      */
     private void cadastrarAnimal() {
         // implemente seu código aqui.
         String nome = pedirString("Digite o nome do animal");
+        String especie = pedirString("Digite a espécie do animal");
+        boolean voaBem;
+        switch (especie) {
+            case "tucano":
+            {
+                String voo = pedirString("Voa bem? (S/N))");
+                if (voo.equals("S")) {
+                    voaBem = true;
+                } else {
+                    voaBem = false;
+                }
+                zoologico.addTucano(nome, voaBem);
+                break;
+            }
+            case "tigre":
+                String listras = pedirString("Digite o tipo de pelo do tigre");
+                zoologico.addTigre(nome, listras);
+                break;
+            case "chimpanze":
+                String pelo = pedirString("Digite o tipo de pelo do chimpanze");
+                zoologico.addChimpanze(nome, pelo);
+                break;
+            case "avestruz":
+            {
+                String voo = pedirString("Voa bem? (S/N))");
+                if (voo.equals("S")) {
+                    voaBem = true;
+                } else {
+                    voaBem = false;
+                }
+                zoologico.addAvestruz(nome, voaBem);
+                break;
+            }
+            default:
+                System.out.println("Espécie inválida!");
+                break;
+        }
+
     }
 
     /*
      * Trata a opção de menu: Descrever Animal
      */
     private void descreverAnimal() {
-        // implemente seu código aqui.
+        String nomeAnimal=pedirString("Digite o nome do animal");
+        Animal animal=zoologico.buscaAnimal(nomeAnimal);
+        System.out.println(animal.getDescricaoCompleta());
     }
 
     /*
      * Trata a opção de menu: Listar Animais
      */
     private void listarAnimais() {
-        // implemente seu código aqui.
+        System.out.println(zoologico.getDescricoesResumidas());
     }
 
     /*
      * Trata a opção de menu: Listar Animais
      */
     private void listarAnimaisCompleto() {
-        // implemente seu código aqui.
+        System.out.println(zoologico.getDescricoesCompletas());
     }
 }
